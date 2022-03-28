@@ -1,6 +1,11 @@
 # compatibility-predictor
 Compatibility Predictor for Datahouse
 
+# My approach
+*notes:*
+ - *make sure to change the double quatation marks*
+ - *using intelliJ as my IDE*
+
 # OVERVIEW
 We need your help! Datahouse is looking to add new members to its team but needs your
 amazing development skills to make the right decision. Your task, should you choose to accept it,
