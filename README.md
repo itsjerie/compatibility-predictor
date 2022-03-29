@@ -5,13 +5,14 @@ Compatibility Predictor for Datahouse
 *notes:*
  - *make sure to change the double quatation marks*
  - *using intelliJ as my IDE*
- - *used (jsfiddle)[https://jsfiddle.net/itsjerie/kc0sq7m3/] as online IDE*
+ - *used jsfiddle as online IDE* [https://jsfiddle.net/itsjerie/kc0sq7m3/]
 
 To get the compatability score:
  1) Get the average of the team members' scores on each attribute
- 2) Then get the absolute value of the difference of the average attribute scores divided by the average attribute scores *eqn =>* | ((Average attribute) - (Applicant's attribute score)) / (Average attribute) |
- 3) Then the average of all attribute scores for each applicants will determine is they are compatible or not with the team
- 4) *note that applicant's score must be in the range from 0 to 1 to pass the compatibility test*
+ 2) Then get the absolute value of the difference of the average attribute scores divided by the average attribute scores 
+    *eqn =>* | ((Average attribute) - (Applicant's attribute score)) / (Average attribute) |
+ 4) Then the average of all attribute scores for each applicants will determine is they are compatible or not with the team
+ 5) *note that applicant's score must be in the range from 0 to 1 to pass the compatibility test*
 
 # --Task Data--
 
