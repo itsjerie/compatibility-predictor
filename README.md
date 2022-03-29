@@ -14,7 +14,7 @@ To get the compatability score:
  4) *note that applicant's score must be in the range from 0 to 1 to pass the compatibility test*
  
 
-# --Task Data--
+# --Main Task--
 
 
 # OVERVIEW
