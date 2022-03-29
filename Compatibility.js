@@ -57,21 +57,21 @@ const input = {
 
 //console.log(input);
 
-const avg = function(data,n){
+const average = function(data,num){
 
 //---------Attribute Data from Team---------
 
-  const intel = Object.entries(data.team).map(items => items[1].attributes.intelligence);
-  const strong = Object.entries(data.team).map(items => items[1].attributes.strength);
-  const endure = Object.entries(data.team).map(items => items[1].attributes.endurance);
-  const tolerance = Object.entries(data.team).map(items => items[1].attributes.spicyFoodTolerance);
+  const intelData = Object.entries(data.team).map(items => items[1].attributes.intelligence);
+  const strenData = Object.entries(data.team).map(items => items[1].attributes.strength);
+  const endureData = Object.entries(data.team).map(items => items[1].attributes.endurance);
+  const toleranceData = Object.entries(data.team).map(items => items[1].attributes.spicyFoodTolerance);
 
 //---------Averaged Data from Team for Each Attribute---------
 
-  const i = intel.reduce(function(a,b){return Number(a) + Number(b)}) / intel.length;
-  const s = strong.reduce(function(a,b){return Number(a) + Number(b)}) / strong.length;
-  const e = endure.reduce(function(a,b){return Number(a) + Number(b)}) / endure.length;
-  const t = tolerance.reduce(function(a,b){return Number(a) + Number(b)}) / tolerance.length;
+  const intelAvg = intelData.reduce(function(a,b){return Number(a) + Number(b)}) / intelData.length;
+  const strenAvg = strenData.reduce(function(a,b){return Number(a) + Number(b)}) / strenData.length;
+  const endureAvg = endureData.reduce(function(a,b){return Number(a) + Number(b)}) / endureData.length;
+  const toleranceAvg = toleranceData.reduce(function(a,b){return Number(a) + Number(b)}) / toleranceData.length;
 
 //---------Data from Applicants---------
 
@@ -79,7 +79,7 @@ const avg = function(data,n){
 
 //---------Averaged Data from Applicants's Attributes---------
 
-  const a = (Math.abs((i - names[n].attributes.intelligence)/i) + Math.abs((s - names[n].attributes.strength)/s) + Math.abs((e - names[n].attributes.endurance)/e) + Math.abs((t - names[n].attributes.spicyFoodTolerance)/t)) / 4;
+  const appAvg = (Math.abs((intelAvg - names[num].attributes.intelligence)/intelAvg) + Math.abs((strenAvg - names[num].attributes.strength)/strenAvg) + Math.abs((endureAvg - names[num].attributes.endurance)/endureAvg) + Math.abs((toleranceAvg - names[num].attributes.spicyFoodTolerance)/toleranceAvg)) / 4;
 
 
   return {
@@ -88,15 +88,15 @@ const avg = function(data,n){
     //strength: s,
     //endurance: e,
     //spicyFoodTolerance: t,
-    name: names[n].name,
-    score: a.toFixed(2)
+    name: names[num].name,
+    score: appAvg.toFixed(2)
   }
 }
 
 const compatible =[];
 
 for(let x=0; x<3; x++){
-  compatible.push(avg(input,x));
+  compatible.push(average(input,x));
 }
 
 console.log(compatible);
