@@ -1,6 +1,16 @@
 # compatibility-predictor
 Compatibility Predictor for Datahouse
 
+# My approach
+*notes:*
+ - *make sure to change the double quatation marks*
+ - *using intelliJ as my IDE*
+
+To get the compatability score:
+ 1) Get the average of the team members' scores on each attribute
+ 2) then get the absolute value of the difference of the average attribute scores divided by the average attribute scores *eqn =>* | ((Average attribute) - (Applicant's attribute score)) / (Average attribute) |
+ 3) *We want the absolute number of the score related to each attribute to be closer to one to verify that is is compatible thus we are going to subtract the score from [2] from 1.*  
+
 # OVERVIEW
 We need your help! Datahouse is looking to add new members to its team but needs your
 amazing development skills to make the right decision. Your task, should you choose to accept it,
